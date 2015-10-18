@@ -68,7 +68,17 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -118,6 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="assets\imported_libs\ASSIMP\Build\code\assimp.vcxproj">
+      <Project>{e2170f3d-8bc9-4941-928f-f69347b705d1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\Model.cpp" />
+    <ClCompile Include="code\ModelFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\Model.h" />
+    <ClInclude Include="code\ModelFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
