@@ -1,0 +1,275 @@
+<assets>
+  <textures>
+    BMP, code/letters.bmp, Letters
+    BMP, code/crate.bmp, CrateTex
+    BMP, code/ground.bmp, GroundTex
+    BMP, code/wall.bmp, WallTex
+    BMP, code/roof.bmp, RoofTex
+    BMP, code/grass.bmp, GrassTex
+  </textures>
+  <gameobjects>
+    <localLightSources>
+      8.0f, 9.0f, 8.0f, 0.4f
+      -8.0f, 9.0f, -8.0f, 0.5f
+    </localLightSources>
+    
+    <axis>
+      <name>
+        Axes
+      </name>
+      <length>
+        3.0f
+      </length>
+      <shaderName>
+        ShaderProgram3d
+      </shaderName>
+    </axis>
+    
+    <linebox>
+      <name>
+        Test Box
+      </name>
+      <width>
+        2.0f
+      </width>
+      <depth>
+        2.0f
+      </depth>   
+      <height>
+        2.0f
+      </height>  
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>     
+      <shaderName>
+        ShaderProgram3d
+      </shaderName>
+    </linebox>    
+    
+    <otfs>
+      <name>
+        Ground
+      </name>
+      <width>
+        80.0f
+      </width>
+      <depth>
+        80.0f
+      </depth>
+      <widthSegments>
+        40
+      </widthSegments>
+      <depthSegments>
+        40
+      </depthSegments>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        GrassTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </otfs>
+    <otfs>
+      <name>
+        Left Wall
+      </name>
+      <width>
+        20.0f
+      </width>
+      <depth>
+        10.0f
+      </depth>
+      <widthSegments>
+        10
+      </widthSegments>
+      <depthSegments>
+        5
+      </depthSegments>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        WallTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </otfs>
+    
+    <otfs>
+      <name>
+        Back Wall
+      </name>
+      <width>
+        20.0f
+      </width>
+      <depth>
+        10.0f
+      </depth>
+      <widthSegments>
+        10
+      </widthSegments>
+      <depthSegments>
+        5
+      </depthSegments>
+      <color>
+        1.0f, 1.0f, 0.0f, 1.0f
+      </color>
+      <textureName>
+        WallTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </otfs>
+
+    <otfs>
+      <name>
+        Right Wall
+      </name>
+      <width>
+        20.0f
+      </width>
+      <depth>
+        10.0f
+      </depth>
+      <widthSegments>
+        10
+      </widthSegments>
+      <depthSegments>
+        5
+      </depthSegments>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        WallTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </otfs>
+
+    <otfs>
+      <name>
+        Roof
+      </name>
+      <width>
+        20.0f
+      </width>
+      <depth>
+        20.0f
+      </depth>
+      <widthSegments>
+        10
+      </widthSegments>
+      <depthSegments>
+        10
+      </depthSegments>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        RoofTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </otfs>
+    
+    <texturedCuboid>
+      <name>
+        Crate
+      </name>
+      <width>
+        2.0f
+      </width>
+      <depth>
+        2.0f
+      </depth>
+      <height>
+        2.0f
+      </height>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        CrateTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </texturedCuboid>
+    
+    <texturedCuboid>
+      <name>
+        Brick
+      </name>
+      <width>
+        4.0f
+      </width>
+      <depth>
+        2.0f
+      </depth>
+      <height>
+        4.0f
+      </height>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        WallTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </texturedCuboid>    
+
+    <sphere>
+      <name>
+        Sphere
+      </name>
+      <radius>
+        1.0f
+      </radius>
+      <slices>
+        20
+      </slices>
+      <stacks>
+        20
+      </stacks>
+      <color>
+        0.9f, 0.8f, 1.0f, 1.0f
+      </color>
+      <shaderName>
+        ShaderProgramIllumination
+      </shaderName>
+    </sphere>
+
+    <cuboid>
+      <name>
+        Cuboid
+      </name>
+      <width>
+        1.0f
+      </width>
+      <depth>
+        1.0f
+      </depth>
+      <height>
+        1.0f
+      </height>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <shaderName>
+        ShaderProgramIllumination
+      </shaderName>
+    </cuboid>
+
+  </gameobjects>
+</assets>
+

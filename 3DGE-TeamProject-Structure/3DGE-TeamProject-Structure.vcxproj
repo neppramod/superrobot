@@ -28,27 +28,27 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -57,18 +57,39 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\3DGE\3dgePropertySheet.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\3DGE\3dgePropertySheet.props" />
+    <Import Project="..\..\..\..\Downloads\3dge\3DGE2015TSR-game-project-DALE\3DGE2015TSR-game-project-253339ed2ca7\3DGE-TeamProject-Structure\ASSIMP.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\3DGE\3dgePropertySheet.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\3DGE\3dgePropertySheet.props" />
+    <Import Project="..\..\..\..\Downloads\3dge\3DGE2015TSR-game-project-DALE\3DGE2015TSR-game-project-253339ed2ca7\3DGE-TeamProject-Structure\ASSIMP.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>C:\Users\jason.bunn\Downloads\assimp-master\assimp-master\lib\Debug;C:\Users\jason.bunn\Downloads\3dge\soil\Simple OpenGL Image Library\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SOIL\Simple OpenGL Image Library\src;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\code;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>C:\Users\jason.bunn\Downloads\assimp-master\assimp-master\lib\Debug;C:\Users\jason.bunn\Downloads\3dge\soil\Simple OpenGL Image Library\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SOIL\Simple OpenGL Image Library\src;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\code;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\jason.bunn\Downloads\assimp-master\assimp-master\include;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SOIL\Simple OpenGL Image Library\src;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SFML-2.3.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\jason.bunn\Downloads\assimp-master\assimp-master\lib\Debug;C:\Users\jason.bunn\Downloads\3dge\soil\Simple OpenGL Image Library\lib;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SFML-2.3.2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\jason.bunn\Downloads\assimp-master\assimp-master\include;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SOIL\Simple OpenGL Image Library\src;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SFML-2.3.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\jason.bunn\Downloads\assimp-master\assimp-master\lib\Debug;C:\Users\jason.bunn\Downloads\3dge\soil\Simple OpenGL Image Library\lib;C:\Users\jason.bunn\Desktop\SRBCTV15\game-project\3DGE-TeamProject-Structure\assets\imported_libs\SFML-2.3.2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -77,6 +98,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>assimp-vc130-mtd.lib;SOIL.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -87,6 +109,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>assimp-vc130-mtd.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,6 +124,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp-vc130-mtd.lib;SOIL.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -115,9 +139,185 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp-vc130-mtd.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="code\Arm.h" />
+    <ClInclude Include="code\AssetLoader.h" />
+    <ClInclude Include="code\Axis.h" />
+    <ClInclude Include="code\BackForthBehavior.h" />
+    <ClInclude Include="code\BaseCuboid.h" />
+    <ClInclude Include="code\BaseObject.h" />
+    <ClInclude Include="code\BaseShader.h" />
+    <ClInclude Include="code\BMPTextureLoader.h" />
+    <ClInclude Include="code\BoundingBox.h" />
+    <ClInclude Include="code\Camera.h" />
+    <ClInclude Include="code\CoreSystem.h" />
+    <ClInclude Include="code\Cuboid.h" />
+    <ClInclude Include="code\CustomTexture.h" />
+    <ClInclude Include="code\GameAssetLoader.h" />
+    <ClInclude Include="code\GameEngine.h" />
+    <ClInclude Include="code\GameObject.h" />
+    <ClInclude Include="code\GameObjectManager.h" />
+    <ClInclude Include="code\GameWindow.h" />
+    <ClInclude Include="code\GameWorld.h" />
+    <ClInclude Include="code\GenericWindow.h" />
+    <ClInclude Include="code\GraphicsSystem.h" />
+    <ClInclude Include="code\IBehavior.h" />
+    <ClInclude Include="code\ITextureLoader.h" />
+    <ClInclude Include="code\ITimer.h" />
+    <ClInclude Include="code\LightSource.h" />
+    <ClInclude Include="code\LineBox.h" />
+    <ClInclude Include="code\Logger.h" />
+    <ClInclude Include="code\MathUtil.h" />
+    <ClInclude Include="code\Mesh.h" />
+    <ClInclude Include="code\Model.h" />
+    <ClInclude Include="code\ModelManager.h" />
+    <ClInclude Include="code\ObjectGenerator.h" />
+    <ClInclude Include="code\OGL2DTextDisplay.h" />
+    <ClInclude Include="code\OGL2DTexture.h" />
+    <ClInclude Include="code\OGL3DCompositeObject.h" />
+    <ClInclude Include="code\OGL3DObject.h" />
+    <ClInclude Include="code\OGLArrayBuffer.h" />
+    <ClInclude Include="code\OGLBaseShader.h" />
+    <ClInclude Include="code\OGLBufferedObject.h" />
+    <ClInclude Include="code\OGLCamera.h" />
+    <ClInclude Include="code\OGLCompositeFlatSurface.h" />
+    <ClInclude Include="code\OGLElementArrayBuffer.h" />
+    <ClInclude Include="code\OGLFirstPersonCamera.h" />
+    <ClInclude Include="code\OGLFontTexture.h" />
+    <ClInclude Include="code\OGLFragmentShader.h" />
+    <ClInclude Include="code\OGLGameObject.h" />
+    <ClInclude Include="code\OGLGraphicsSystem.h" />
+    <ClInclude Include="code\OGLObject.h" />
+    <ClInclude Include="code\OGLReferenceFrame.h" />
+    <ClInclude Include="code\OGLReferenceFrameStack.h" />
+    <ClInclude Include="code\OGLShaderCompiler.h" />
+    <ClInclude Include="code\OGLShaderManager.h" />
+    <ClInclude Include="code\OGLShaderProgram.h" />
+    <ClInclude Include="code\OGLSphericalCamera.h" />
+    <ClInclude Include="code\OGLTexturedFlatSurface.h" />
+    <ClInclude Include="code\OGLVertexShader.h" />
+    <ClInclude Include="code\OGLViewingFrustum.h" />
+    <ClInclude Include="code\PawnBehavior.h" />
+    <ClInclude Include="code\PCInputSystem.h" />
+    <ClInclude Include="code\Plane.h" />
+    <ClInclude Include="code\RGBA.h" />
+    <ClInclude Include="code\Room.h" />
+    <ClInclude Include="code\RotateYBehavior.h" />
+    <ClInclude Include="code\ShaderManager.h" />
+    <ClInclude Include="code\SOILTexture.h" />
+    <ClInclude Include="code\Sound3DGE.h" />
+    <ClInclude Include="code\SoundManager.h" />
+    <ClInclude Include="code\Sphere.h" />
+    <ClInclude Include="code\StockObjectLoader.h" />
+    <ClInclude Include="code\Sword.h" />
+    <ClInclude Include="code\TextFileReader.h" />
+    <ClInclude Include="code\Texture.h" />
+    <ClInclude Include="code\TexturedCuboid.h" />
+    <ClInclude Include="code\TextureManager.h" />
+    <ClInclude Include="code\TheGame.h" />
+    <ClInclude Include="code\Turret.h" />
+    <ClInclude Include="code\Uniform.h" />
+    <ClInclude Include="code\ViewingFrustum.h" />
+    <ClInclude Include="code\Win32OGLWindow.h" />
+    <ClInclude Include="code\Win32Window.h" />
+    <ClInclude Include="code\WindowsConsoleLogger.h" />
+    <ClInclude Include="code\WindowsTimer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\Arm.cpp" />
+    <ClCompile Include="code\AssetLoader.cpp" />
+    <ClCompile Include="code\Axis.cpp" />
+    <ClCompile Include="code\BackForthBehavior.cpp" />
+    <ClCompile Include="code\BaseCuboid.cpp" />
+    <ClCompile Include="code\BaseObject.cpp" />
+    <ClCompile Include="code\BaseShader.cpp" />
+    <ClCompile Include="code\Behavior.cpp" />
+    <ClCompile Include="code\BMPTextureLoader.cpp" />
+    <ClCompile Include="code\BoundingBox.cpp" />
+    <ClCompile Include="code\Camera.cpp" />
+    <ClCompile Include="code\CoreSystem.cpp" />
+    <ClCompile Include="code\Cuboid.cpp" />
+    <ClCompile Include="code\CustomTexture.cpp" />
+    <ClCompile Include="code\GameAssetLoader.cpp" />
+    <ClCompile Include="code\GameEngine.cpp" />
+    <ClCompile Include="code\GameObject.cpp" />
+    <ClCompile Include="code\GameObjectManager.cpp" />
+    <ClCompile Include="code\GameWindow.cpp" />
+    <ClCompile Include="code\GameWorld.cpp" />
+    <ClCompile Include="code\GenericWindow.cpp" />
+    <ClCompile Include="code\GraphicsSystem.cpp" />
+    <ClCompile Include="code\ITextureLoader.cpp" />
+    <ClCompile Include="code\ITimer.cpp" />
+    <ClCompile Include="code\LightSource.cpp" />
+    <ClCompile Include="code\LineBox.cpp" />
+    <ClCompile Include="code\Logger.cpp" />
+    <ClCompile Include="code\Main.cpp" />
+    <ClCompile Include="code\MathUtil.cpp" />
+    <ClCompile Include="code\Mesh.cpp" />
+    <ClCompile Include="code\Model.cpp" />
+    <ClCompile Include="code\ModelManager.cpp" />
+    <ClCompile Include="code\ObjectGenerator.cpp" />
+    <ClCompile Include="code\OGL2DTextDisplay.cpp" />
+    <ClCompile Include="code\OGL2DTexture.cpp" />
+    <ClCompile Include="code\OGL3DCompositeObject.cpp" />
+    <ClCompile Include="code\OGL3DObject.cpp" />
+    <ClCompile Include="code\OGLArrayBuffer.cpp" />
+    <ClCompile Include="code\OGLBaseShader.cpp" />
+    <ClCompile Include="code\OGLBufferedObject.cpp" />
+    <ClCompile Include="code\OGLCamera.cpp" />
+    <ClCompile Include="code\OGLCompositeFlatSurface.cpp" />
+    <ClCompile Include="code\OGLElementArrayBuffer.cpp" />
+    <ClCompile Include="code\OGLFirstPersonCamera.cpp" />
+    <ClCompile Include="code\OGLFontTexture.cpp" />
+    <ClCompile Include="code\OGLFragmentShader.cpp" />
+    <ClCompile Include="code\OGLGameObject.cpp" />
+    <ClCompile Include="code\OGLGraphicsSystem.cpp" />
+    <ClCompile Include="code\OGLObject.cpp" />
+    <ClCompile Include="code\OGLReferenceFrame.cpp" />
+    <ClCompile Include="code\OGLReferenceFrameStack.cpp" />
+    <ClCompile Include="code\OGLShaderCompiler.cpp" />
+    <ClCompile Include="code\OGLShaderManager.cpp" />
+    <ClCompile Include="code\OGLShaderProgram.cpp" />
+    <ClCompile Include="code\OGLSphericalCamera.cpp" />
+    <ClCompile Include="code\OGLTexturedFlatSurface.cpp" />
+    <ClCompile Include="code\OGLVertexShader.cpp" />
+    <ClCompile Include="code\OGLViewingFrustum.cpp" />
+    <ClCompile Include="code\PawnBehavior.cpp" />
+    <ClCompile Include="code\PCInputSystem.cpp" />
+    <ClCompile Include="code\Plane.cpp" />
+    <ClCompile Include="code\Room.cpp" />
+    <ClCompile Include="code\RotateYBehavior.cpp" />
+    <ClCompile Include="code\ShaderManager.cpp" />
+    <ClCompile Include="code\SOILTexture.cpp" />
+    <ClCompile Include="code\Sound3DGE.cpp" />
+    <ClCompile Include="code\SoundManager.cpp" />
+    <ClCompile Include="code\Sphere.cpp" />
+    <ClCompile Include="code\StockObjectLoader.cpp" />
+    <ClCompile Include="code\Sword.cpp" />
+    <ClCompile Include="code\TextFileReader.cpp" />
+    <ClCompile Include="code\Texture.cpp" />
+    <ClCompile Include="code\TexturedCuboid.cpp" />
+    <ClCompile Include="code\TextureManager.cpp" />
+    <ClCompile Include="code\TheGame.cpp" />
+    <ClCompile Include="code\Turret.cpp" />
+    <ClCompile Include="code\Uniform.cpp" />
+    <ClCompile Include="code\ViewingFrustum.cpp" />
+    <ClCompile Include="code\Win32OGLWindow.cpp" />
+    <ClCompile Include="code\Win32Window.cpp" />
+    <ClCompile Include="code\WindowsConsoleLogger.cpp" />
+    <ClCompile Include="code\WindowsTimer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="code\FragmentShader3DIllumination.glsl" />
+    <None Include="code\FragmentShaderText.glsl" />
+    <None Include="code\FragmentShaderTexture.glsl" />
+    <None Include="code\VertexShader3DIllumination.glsl" />
+    <None Include="code\VertexShader3DPerspective.glsl" />
+    <None Include="code\VertexShaderText.glsl" />
+    <None Include="code\VertexShaderTexture.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
