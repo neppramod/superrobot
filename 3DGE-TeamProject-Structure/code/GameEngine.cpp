@@ -1,6 +1,6 @@
 #include "GameEngine.h"
 #include "Logger.h"
-#include "GameWindow.h"
+#include "Game.h"
 #include "GraphicsSystem.h"
 #include "CoreSystem.h"
 #include "PCInputSystem.h"
@@ -10,16 +10,15 @@
 #include "ShaderManager.h"
 #include "TheGame.h"
 #include "AssetLoader.h"
-
+#include "gl/glew.h"
 GameEngine::GameEngine(
 	Logger *logger,
 	TheGame *theGame,
 	AssetLoader* assetLoader,
 	CoreSystem *core,
 	GraphicsSystem *graphics, 
-	GameWindow *window,
-	PCInputSystem *inputSystem,
-	ITimer *timer) : BaseObject(logger)
+	Game *window,
+	PCInputSystem *inputSystem) : BaseObject(logger)
 {
 	this->core = core;
 	this->core->setLogger(this->logger);
@@ -62,9 +61,9 @@ GameEngine::~GameEngine()
 
 void GameEngine::initializeWindowAndGraphics(const string& uniformAssetFilename)
 {
-	// First create the window
-	this->initialized = this->window->create();
-	if (this->initialized) {
+
+	
+		GLenum err = glewInit();
 		// Next, intialize the graphics system
 		this->initialized = this->graphics->initialize();
 		// Set up the GPU
@@ -72,7 +71,7 @@ void GameEngine::initializeWindowAndGraphics(const string& uniformAssetFilename)
 			setupGraphicsParameters(uniformAssetFilename);
 			this->graphics->setUpViewingEnvironment();
 		}
-	}
+	
 }
 
 void GameEngine::loadShaders(const string& shaderAssetFilename)
@@ -93,8 +92,8 @@ void GameEngine::setupGame(const string& gameAssetsFilename)
 void GameEngine::run()
 {
 	if (this->initialized){
-		this->window->show();
-		this->window->listenForEvents(this->timer);
+		
+		window->run();
 	}
 	else {
 		if (this->logger) {

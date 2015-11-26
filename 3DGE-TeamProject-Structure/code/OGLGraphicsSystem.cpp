@@ -6,13 +6,13 @@
 #include "GameWorld.h"
 #include "OGLViewingFrustum.h"
 #include "Logger.h"
-#include "OGLCamera.h"
+#include "Camera.h"
 #include "GameObjectManager.h"
 #include "OGLObject.h"
 #include "LightSource.h"
 #include "MathUtil.h"
 #include "TheGame.h"
-#include "OGL2DTextDisplay.h"
+//#include "OGL2DTextDisplay.h"
 #include "TextureManager.h"
 #include "OGL3DObject.h"
 
@@ -124,9 +124,10 @@ void OGLGraphicsSystem::update(float elapsedSeconds)
 
 	auto allObjects = this->getGameWorld()->getObjectManager()->getAllObjects();
 
-	if (this->textDisplay) {
+	/*if (this->textDisplay) {
 		this->textDisplay->clear();
-	}
+		textDisplay->addText("Bounding Box Demonstration", -1, 1);
+	}*/
 
 	string colliding = "";
 	OGL3DObject *object;
@@ -138,9 +139,10 @@ void OGLGraphicsSystem::update(float elapsedSeconds)
 		}
 		iterator++;
 	}
+	/*
 	if (this->textDisplay) {
-		this->textDisplay->addText(colliding, 0, 0);
-	}
+		this->textDisplay->addText(colliding, -1.0f, 0);
+	}*/
 
 }
 
@@ -150,10 +152,10 @@ void OGLGraphicsSystem::render()
 
 	GameObjectManager *objectMgr = this->gameWorld->getObjectManager();
 	objectMgr->renderVisibleObjects();
-
+	/*
 	if (this->textDisplay) {
 		this->textDisplay->render();
-	}
+	}*/
 }
 
 

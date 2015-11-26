@@ -5,8 +5,12 @@
 #include "Logger.h"
 #include "Camera.h"
 #include "TextureManager.h"
+#include "GameObjectManager.h"
+#include "GameObject.h"
 
 #include <cmath>
+#include <map>
+using std::map;
 
 GraphicsSystem::GraphicsSystem(
 	ShaderManager *shaderManager, 
@@ -61,5 +65,6 @@ void GraphicsSystem::setFrameRate(unsigned int frameRate)
 {
 	this->tickLengthSeconds = 1.0f / frameRate;
 }
+
 
 

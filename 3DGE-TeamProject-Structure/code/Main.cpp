@@ -2,6 +2,10 @@
 #pragma comment(lib, "opengl32.lib")
 #pragma comment(lib, "glutilD.lib")
 
+#include "Game.h"
+#include "OptionsMenu.h"
+#include "World.h"
+#include "CharacterCreation.h"
 #include "GameEngine.h"
 #include "WindowsConsoleLogger.h"
 #include "GameWindow.h"
@@ -18,15 +22,21 @@
 #include "OGLViewingFrustum.h"
 #include "StockObjectLoader.h"
 #include "PCInputSystem.h"
-#include "WindowsTimer.h"
+//#include "WindowsTimer.h"
 #include "OGLFirstPersonCamera.h"
 #include "TheGame.h"
 #include "TextureManager.h"
 #include "GameAssetLoader.h"
-#include "SoundManager.h"
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+std::vector<Container*> MenuRenderHelper = {};
+
+OptionsMenu optionsMenu;
+World world;
+CharacterCreation characterCreation;
+
+int main(void)
 {
+	//Game* gameWindow = new Game();
 	GameEngine gameEngine(
 		new WindowsConsoleLogger(), 
 		new TheGame(),
@@ -40,17 +50,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				new OGLFirstPersonCamera()),
 			new OGLViewingFrustum(),
 			new TextureManager()),
-		new GameWindow(
-			L"The Game Window", 
-			1000, 
-			800),
-		new PCInputSystem(),
-		new WindowsTimer()
+		new Game(),
+		//gameWindow,
+		new PCInputSystem()
 	);
 	gameEngine.loadShaders("code/ShaderAssets.data");
 	gameEngine.initializeWindowAndGraphics("code/ShaderAssets.data");
 	gameEngine.setupGame("code/GameAssets.data");
-	SoundManager::createInstance().playSound("canary", glm::vec3(1.0, 0.5, 1.0));
+	world.setEngine(&gameEngine);
+	GraphicsSystem *graphics = gameEngine.getGraphicsSystem();
+	world.setGraphicsSystem(graphics);
+	sf::RenderWindow* window = gameEngine.getGameWindow()->getWindow();
+	
+	world.setWindow(window);
+	
 	gameEngine.run();
 
 	return 0;

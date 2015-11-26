@@ -20,7 +20,7 @@
 #include "PCInputSystem.h"
 #include "BackForthBehavior.h"
 #include "OGL3DObject.h"
-#include "OGL2DTextDisplay.h"
+//#include "OGL2DTextDisplay.h"
 #include "BMPTextureLoader.h"
 #include "OGL2DTexture.h"
 #include "Plane.h"
@@ -34,7 +34,8 @@
 #include "Model.h"
 #include "PawnBehavior.h"
 
-#include <gl\glew.h>
+//#include <gl\glew.h>
+
 #include <glm\gtc\type_ptr.hpp>
 #include "SOILTexture.h"
 
@@ -62,6 +63,7 @@ void TheGame::setupGraphicsParameters(const string& uniformAssetFilename)
 
 void TheGame::setupViewingEnvironment()
 {
+
 	OGLGraphicsSystem* graphics = (OGLGraphicsSystem*)this->gameEngine->getGraphicsSystem();
 	OGLViewingFrustum* frustum = (OGLViewingFrustum*)graphics->getViewingFrustum();
 	OGLShaderManager* shaderMgr = graphics->getOGLShaderManager();
@@ -94,6 +96,9 @@ void TheGame::setupViewingEnvironment()
 	glDepthMask(GL_TRUE);
 	glDepthFunc(GL_LEQUAL);
 	glDepthRange(0.0f, 1.0f);
+
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+	
 }
 
 void TheGame::sendShaderData()
@@ -211,7 +216,7 @@ void TheGame::setup(const string& gameAssetFilename)
 	GameObjectManager* objectMgr = graphics->getGameWorld()->getObjectManager();
 
 	OGLShaderProgram* plainShader3d = (OGLShaderProgram*)shaderMgr->getShader("ShaderProgram3d");
-	OGLShaderProgram* textShader = (OGLShaderProgram*)shaderMgr->getShader("TextShader");
+	
 
 	AssetLoader* loader = this->gameEngine->getAssetLoader();
 	loader->loadAssetFile(gameAssetFilename);
@@ -221,72 +226,7 @@ void TheGame::setup(const string& gameAssetFilename)
 		(OGLFirstPersonCamera *)graphics->getGameWorld()->getCamera();
 	camera->setPosition(0.0f, 5.0f, 10.0f);
 
-	OGL2DTexture* texture = (OGL2DTexture*)texMgr->getTexture("Letters");;
-	OGL2DTextDisplay* textDisplay = new OGL2DTextDisplay();
-	textDisplay->setTexture(texture);
-	textDisplay->setShaderProgram(textShader->getHandle());
-	graphics->setTextDisplay(textDisplay);
-
-	/*OGLObject* object = (OGL3DObject*)graphics->getGameObject("Sphere");
-	if (object){
-		Sphere* s = (Sphere*)object;
-		float diameter = s->getRadius() * 2;
-		object->boundingBox.set(diameter, diameter, diameter);
-		object->boundingBox.use = true;
-		object->material.shininess = 200;
-		object->material.specular = { 1, 1, 1, 1 };
-		object->referenceFrame.rotateWorldY(-90.0f);
-		object->referenceFrame.translateWorld(0, s->getRadius(), 0);
-		object->setSpeed(10);
-		object->setBehavior(new BackForthBehavior(10));
-		object->setVisibility(true);
-
-		string name = s->getName() + "BB";
-		object = new LineBox(name, diameter, diameter, diameter);
-		object->setShaderProgram(plainShader3d->getHandle());
-		objectMgr->addObject(name, object);
-		s->lineBox = (LineBox*)object;
-		s->showBoundingBox = true;
-	}
-
-	object = (OGLObject*)graphics->getGameObject("Crate");
-	if (object) {
-		TexturedCuboid* c = (TexturedCuboid*)object;
-		object->boundingBox.set(c->getWidth(), c->getDepth(), c->getHeight());
-		object->boundingBox.use = true;
-		object->referenceFrame.setPosition(-10, 1, -5);
-		object->setBehavior(new BackForthBehavior(24));
-		object->setSpeed(5);
-		object->setVisibility(true);
-
-		string name = c->getName() + "BB";
-		object = new LineBox(
-			name, c->getWidth() + 0.01f, c->getDepth() + 0.01f, c->getHeight() + 0.01f);
-		object->setShaderProgram(plainShader3d->getHandle());
-		objectMgr->addObject(name, object);
-		c->lineBox = (LineBox*)object;
-		c->showBoundingBox = true;
-	}
-
-	object = (OGLObject*)graphics->getGameObject("Brick");
-	if (object) {
-		TexturedCuboid* c = (TexturedCuboid*)object;
-		object->boundingBox.set(c->getWidth(), c->getDepth(), c->getHeight());
-		object->boundingBox.use = true;
-		object->referenceFrame.setPosition(-10, 3, -15);
-		object->referenceFrame.rotateWorldY(-45.0f);
-		object->setBehavior(new BackForthBehavior(24));
-		object->setSpeed(7);
-		object->setVisibility(true);
-
-		string name = c->getName() + "BB";
-		object = new LineBox(
-			name, c->getWidth() + 0.01f, c->getDepth() + 0.01f, c->getHeight() + 0.01f);
-		object->setShaderProgram(plainShader3d->getHandle());
-		objectMgr->addObject(name, object);
-		c->lineBox = (LineBox*)object;
-		c->showBoundingBox = true;
-	}*/
+	
 
 	OGLObject* object = (OGLObject*)graphics->getGameObject("Axes");
 	if (object) {
@@ -332,7 +272,7 @@ void TheGame::setup(const string& gameAssetFilename)
 	object->referenceFrame.rotateWorldX(180);
 	object->referenceFrame.translateWorld(0, 10, 0);
 
-	texture = new SOILTexture("Floor.jpg");
+	OGL2DTexture* texture = new SOILTexture("Floor.jpg");
 	texture->create();
 	object = new TexturedCuboid("mine");
 	object->referenceFrame.setPosition(0, 0, 0);
@@ -342,7 +282,7 @@ void TheGame::setup(const string& gameAssetFilename)
 	objectMgr->addObject("mine",object);
 
 
-	textDisplay->addText("Bounding Box Demonstration", -1, 1);
+	//textDisplay->addText("Bounding Box Demonstration", -1, 1);
 
 	ModelManager mManager;
 	mManager.setLogger(this->logger);

@@ -12,7 +12,7 @@ class OGLShaderManager;
 class OGLVertexShader;
 class OGLFragmentShader;
 class Renderer;
-class GameWindow;
+class Game;
 class OGLShaderProgram;
 class GraphicsSystem;
 class CoreSystem;
@@ -27,7 +27,7 @@ class GameEngine : public BaseObject
 protected:
 	CoreSystem *core;
 	GraphicsSystem *graphics;
-	GameWindow *window;
+	Game *window;
 	PCInputSystem *inputSystem;
 	ITimer *timer;
 	TheGame *theGame;
@@ -41,9 +41,8 @@ public:
 		AssetLoader* assetLoader,
 		CoreSystem *core, 
 		GraphicsSystem *graphics, 
-		GameWindow *window,
-		PCInputSystem *inputSystem,
-		ITimer *timer);
+		Game *window,
+		PCInputSystem *inputSystem);
 
 	virtual ~GameEngine();
 
@@ -54,6 +53,8 @@ public:
 	AssetLoader* getAssetLoader() { return this->assetLoader; }
 
 	CoreSystem *getCoreSystem() { return this->core; }
+
+	Game* getGameWindow() { return this->window; }
 
 	PCInputSystem *getInputSystem() { return this->inputSystem; }
 

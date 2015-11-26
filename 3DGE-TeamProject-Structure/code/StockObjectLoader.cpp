@@ -11,7 +11,7 @@
 #include "OGL2DTexture.h"
 #include "BMPTextureLoader.h"
 #include "OGLTexturedFlatSurface.h"
-#include "OGL2DTextDisplay.h"
+//#include "OGL2DTextDisplay.h"
 #include "TextureManager.h"
 
 #include <gl\glew.h>

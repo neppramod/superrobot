@@ -19,12 +19,19 @@ class GraphicsSystem : public BaseObject
 {
 protected:
 	ShaderManager *shaderManager;
+
 	GameWorld *gameWorld;
+
 	ViewingFrustum *frustum;
+
 	TheGame* theGame;
+
 	TextureManager* textureManager;
+
 	bool initialized;
+
 	float tickLengthSeconds;
+
 	float totalElapsedSeconds;
 
 public:
