@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CompareDump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\ImageExtractor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\WriteDumb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Export.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\assimp_cmd.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BA15C08B-0083-48AB-AA12-A24EE63F0A49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{AED71D3F-9FE9-44D8-B56E-D4181F84D93D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

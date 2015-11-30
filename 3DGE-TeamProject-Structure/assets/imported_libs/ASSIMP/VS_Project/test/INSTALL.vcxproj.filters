@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\CMakeFiles\b1b1b8995de3e1531adcb7e77157cb55\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5160FB08-44BC-49EA-B217-5B91ED5FF105}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

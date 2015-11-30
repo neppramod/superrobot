@@ -1,0 +1,6 @@
+#pragma once
+namespace Enums {
+
+	enum BUTTON_STATES{ BUTTON_DEFAULT, BUTTON_SELECTED, BUTTON_PRESSED};
+
+}

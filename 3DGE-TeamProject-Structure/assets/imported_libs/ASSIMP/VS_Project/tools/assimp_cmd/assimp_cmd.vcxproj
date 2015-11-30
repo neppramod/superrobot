@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{86A62693-C28A-4A0D-985A-3423A562E261}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>assimp_cmd</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">assimp_cmd.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">assimpd</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">assimp_cmd.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">assimp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">assimp_cmd.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">assimp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">assimp_cmd.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">assimp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/code/Debug/assimpd.dll D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\code\Debug\assimpd.lib;..\..\contrib\zlib\Debug\zlibstaticd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/$(Configuration);D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/Debug/assimpd.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/Debug/assimpd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/code/Release/assimp.dll D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\code\Release\assimp.lib;..\..\contrib\zlib\Release\zlibstatic.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/$(Configuration);D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/Release/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/Release/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/code/MinSizeRel/assimp.dll D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\code\MinSizeRel\assimp.lib;..\..\contrib\zlib\MinSizeRel\zlibstatic.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/$(Configuration);D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/MinSizeRel/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/MinSizeRel/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ASSIMP_BUILD_BOOST_WORKAROUND;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\include;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code\BoostWorkaround;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\contrib\zlib;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/code/RelWithDebInfo/assimp.dll D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\code\RelWithDebInfo\assimp.lib;..\..\contrib\zlib\RelWithDebInfo\zlibstatic.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/$(Configuration);D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib;D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/RelWithDebInfo/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/tools/assimp_cmd/RelWithDebInfo/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1 -BD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build --check-stamp-file D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1 -BD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build --check-stamp-file D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1 -BD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build --check-stamp-file D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1 -BD:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build --check-stamp-file D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/assimp-3.1.1/tools/assimp_cmd/CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\Build\tools\assimp_cmd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Main.h" />
+    <ClInclude Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\resource.h" />
+    <ResourceCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\assimp_cmd.rc"  />
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\CompareDump.cpp"  />
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\ImageExtractor.cpp"  />
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Main.cpp"  />
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\WriteDumb.cpp"  />
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Info.cpp"  />
+    <ClCompile Include="D:\Projects\Coding\3DGE\game-project\3DGE-TeamProject-Structure\assets\imported_libs\ASSIMP\assimp-3.1.1\tools\assimp_cmd\Export.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/ZERO_CHECK.vcxproj">
+      <Project>D8FE0BE7-ABFB-4066-AA9A-8ADC50819A71</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/code/assimp.vcxproj">
+      <Project>E2170F3D-8BC9-4941-928F-F69347B705D1</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Projects/Coding/3DGE/game-project/3DGE-TeamProject-Structure/assets/imported_libs/ASSIMP/Build/contrib/zlib/zlibstatic.vcxproj">
+      <Project>4A14AFC7-E134-4677-B817-1D41DFEC26EA</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

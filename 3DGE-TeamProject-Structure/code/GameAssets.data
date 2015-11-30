@@ -1,0 +1,56 @@
+<assets>
+  <textures>
+    BMP, code/ground.bmp, GroundTex
+    BMP, code/grass.bmp, GrassTex
+  </textures>
+  <gameobjects>
+    <localLightSources>
+      8.0f, 9.0f, 8.0f, 0.4f
+      -8.0f, 9.0f, -8.0f, 0.5f
+    </localLightSources>
+    
+    <axis>
+      <name>
+        Axes
+      </name>
+      <length>
+        3.0f
+      </length>
+      <shaderName>
+        ShaderProgram3d
+      </shaderName>
+    </axis>
+    
+      
+    
+    <otfs>
+      <name>
+        Ground
+      </name>
+      <width>
+        80.0f
+      </width>
+      <depth>
+        80.0f
+      </depth>
+      <widthSegments>
+        40
+      </widthSegments>
+      <depthSegments>
+        40
+      </depthSegments>
+      <color>
+        1.0f, 1.0f, 1.0f, 1.0f
+      </color>
+      <textureName>
+        GrassTex
+      </textureName>
+      <shaderName>
+        TextureShader
+      </shaderName>
+    </otfs>
+    
+
+  </gameobjects>
+</assets>
+
