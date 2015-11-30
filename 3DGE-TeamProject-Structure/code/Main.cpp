@@ -47,7 +47,7 @@ int main(void)
 			new OGLShaderManager(), 
 			new GameWorld(
 				new GameObjectManager(),
-				new OGLFirstPersonCamera()),
+				new OGLSphericalCamera()),
 			new OGLViewingFrustum(),
 			new TextureManager()),
 		new Game(),

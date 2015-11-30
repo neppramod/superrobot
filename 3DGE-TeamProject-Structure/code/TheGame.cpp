@@ -14,6 +14,7 @@
 #include "OGLFragmentShader.h"
 #include "AssetLoader.h"
 #include "OGLFirstPersonCamera.h"
+#include "OGLSphericalCamera.h"
 #include "OGLObject.h"
 #include "RotateYBehavior.h"
 #include "GameObjectManager.h"
@@ -222,10 +223,10 @@ void TheGame::setup(const string& gameAssetFilename)
 	loader->loadAssetFile(gameAssetFilename);
 	loader->loadAssets();
 
-	OGLFirstPersonCamera *camera =
-		(OGLFirstPersonCamera *)graphics->getGameWorld()->getCamera();
-	camera->setPosition(0.0f, 5.0f, 10.0f);
-
+	OGLSphericalCamera *camera =
+		(OGLSphericalCamera *)graphics->getGameWorld()->getCamera();
+	camera->setPosition(20.0f, -70.0f, 0.0f);
+	camera->setTarget(0, 0, 0);
 	
 
 	OGLObject* object = (OGLObject*)graphics->getGameObject("Axes");
@@ -233,11 +234,6 @@ void TheGame::setup(const string& gameAssetFilename)
 		object->setVisibility(true);
 	}
 
-	object = (OGLObject*)graphics->getGameObject("Test Box");
-	if (object) {
-		object->referenceFrame.setPosition(10, 1, 0);
-		object->setBehavior(new RotateYBehavior(90));
-	}
 
 	object = (OGLObject*)graphics->getGameObject("Ground");
 	object->setVisibility(true);
@@ -248,29 +244,7 @@ void TheGame::setup(const string& gameAssetFilename)
 		object->setBehavior(new RotateYBehavior(60));
 	}
 
-	object = (OGLObject*)graphics->getGameObject("Cuboid");
-	if (object) {
-		object->setBehavior(new RotateYBehavior(45));
-		object->referenceFrame.translateWorld(0, 3, -8);
-	}
-
-	object = (OGLObject*)graphics->getGameObject("Left Wall");
-	object->referenceFrame.rotateWorldX(90);
-	object->referenceFrame.rotateWorldY(90);
-	object->referenceFrame.translateWorld(-10, 5, 0);
-
-	object = (OGLObject*)graphics->getGameObject("Back Wall");
-	object->referenceFrame.rotateWorldX(90);
-	object->referenceFrame.translateWorld(0, 5, -10);
-
-	object = (OGLObject*)graphics->getGameObject("Right Wall");
-	object->referenceFrame.rotateWorldX(90);
-	object->referenceFrame.rotateWorldY(-90);
-	object->referenceFrame.translateWorld(10, 5, 0);
-
-	object = (OGLObject*)graphics->getGameObject("Roof");
-	object->referenceFrame.rotateWorldX(180);
-	object->referenceFrame.translateWorld(0, 10, 0);
+	
 
 	OGL2DTexture* texture = new SOILTexture("Floor.jpg");
 	texture->create();
@@ -333,7 +307,7 @@ void TheGame::processInputs()
 	camera->setJustLooking();
 	camera->setNotMoving();
 
-	if (inputSystem->keys[VK_LEFT]) {
+	/*if (inputSystem->keys[VK_LEFT]) {
 		camera->setLookingLeft();
 	}
 	else if (inputSystem->keys[VK_RIGHT]) {
@@ -372,5 +346,5 @@ void TheGame::processInputs()
 	}
 	else if (inputSystem->isMouseMovingDown()) {
 		camera->setLookingDown();
-	}
+	}*/
 }

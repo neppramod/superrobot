@@ -6,7 +6,7 @@ OGLSphericalCamera::OGLSphericalCamera()
 	this->up = glm::vec3(0.0f, 1.0f, 0.0f);
 	this->target = glm::vec3(0.0f, 0.0f, 0.0f);
 	this->setPosition(5, 0, 0);
-	this->leftRight = MOVING_LEFT;
+	this->leftRight = NOT_MOVING;
 	this->upDown = NOT_MOVING;
 }
 

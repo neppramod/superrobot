@@ -2,7 +2,7 @@
 
 ViewingFrustum::ViewingFrustum()
 {
-	set(60.0f, 1.78f, 1.0f, 45.0f);
+	set(75.0f, 1.78f, 1.0f, 45.0f);
 }
 
 ViewingFrustum::~ViewingFrustum()
