@@ -2,11 +2,12 @@
 #include "Logger.h"
 #include "GameEngine.h"
 #include "SFML/OpenGL.hpp"
+#include <SFML/Graphics/Texture.hpp>
 
 
 //fix the include hierarchy at some point
 
-Game::Game() : window(sf::VideoMode(1024, 720), "Super Robot Battle Chess TV 15",sf::Style::Default, sf::ContextSettings(24,8,0,3,3)), mainMenu()
+Game::Game() : window(sf::VideoMode(1024, 768), "Super Robot Battle Chess TV 15",sf::Style::Default, sf::ContextSettings(24,8,0,3,3)), mainMenu()
 {
 	
 	

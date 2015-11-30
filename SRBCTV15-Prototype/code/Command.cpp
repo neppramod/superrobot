@@ -12,7 +12,7 @@ namespace Commands {
 	void NewGame::execute()
 	{
 
-		MenuRenderHelper.push_back(&characterCreation);
+		MenuRenderHelper.push_back(&world);
 
 	};
 

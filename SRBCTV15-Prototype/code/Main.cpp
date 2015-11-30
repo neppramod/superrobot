@@ -62,6 +62,7 @@ int main(void)
 		new PCInputSystem()
 	);
 	gameEngine.getLogger()->log("Engine initialized");
+
 	logger->log("Loading Shaders...");
 	gameEngine.loadShaders("code/ShaderAssets.data");
 
@@ -83,6 +84,8 @@ int main(void)
 
 	logger->log("Assiging world the window...");
 	world.setWindow(window);
+
+	window->clear();
 
 	logger->log("Running the game...");
 	gameEngine.run();
