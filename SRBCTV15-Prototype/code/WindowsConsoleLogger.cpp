@@ -18,8 +18,8 @@ WindowsConsoleLogger::~WindowsConsoleLogger(void)
 void WindowsConsoleLogger::create()
 {
 	this->stdOut = NULL;
-
-	if (AllocConsole() == 0) return;
+	int temp = AllocConsole();
+	//if (temp == 0) return;
 
 	this->stdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (this->stdOut == INVALID_HANDLE_VALUE || this->stdOut == NULL) {

@@ -28,6 +28,9 @@
 #include "TextureManager.h"
 #include "GameAssetLoader.h"
 
+
+#include <iostream>
+
 std::vector<Container*> MenuRenderHelper = {};
 
 OptionsMenu optionsMenu;
@@ -36,9 +39,13 @@ CharacterCreation characterCreation;
 
 int main(void)
 {
+	//free the current console so that the logger can create one
+	//FreeConsole();
+	WindowsConsoleLogger* logger = new WindowsConsoleLogger();
+	logger->log("Initializing engine");
 	//Game* gameWindow = new Game();
 	GameEngine gameEngine(
-		new WindowsConsoleLogger(), 
+		logger,
 		new TheGame(),
 		new GameAssetLoader(),
 		new CoreSystem(
@@ -54,17 +61,32 @@ int main(void)
 		//gameWindow,
 		new PCInputSystem()
 	);
+	gameEngine.getLogger()->log("Engine initialized");
+	logger->log("Loading Shaders...");
 	gameEngine.loadShaders("code/ShaderAssets.data");
+
+	logger->log("Initializing window and graphics..");
 	gameEngine.initializeWindowAndGraphics("code/ShaderAssets.data");
+
+	logger->log("Setting up game...");
 	gameEngine.setupGame("code/GameAssets.data");
+
+	logger->log("Assiging world the engine...");
 	world.setEngine(&gameEngine);
+
 	GraphicsSystem *graphics = gameEngine.getGraphicsSystem();
+
+	logger->log("Assiging world the graphics...");
 	world.setGraphicsSystem(graphics);
+
 	sf::RenderWindow* window = gameEngine.getGameWindow()->getWindow();
-	
+
+	logger->log("Assiging world the window...");
 	world.setWindow(window);
-	
+
+	logger->log("Running the game...");
 	gameEngine.run();
 
+	logger->log("Exiting the game...");
 	return 0;
 }

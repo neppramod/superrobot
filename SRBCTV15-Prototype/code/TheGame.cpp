@@ -260,10 +260,10 @@ void TheGame::setup(const string& gameAssetFilename)
 
 	ModelManager mManager;
 	mManager.setLogger(this->logger);
-	mManager.loadModel("rook", "../3DGE-TeamProject-Structure/assets/players/model/Rook.obj");
-	mManager.loadModel("pawn", "../3DGE-TeamProject-Structure/assets/players/model/Pawn.obj");
-	texMgr->addTexture("rook", new SOILTexture("../3DGE-TeamProject-Structure/assets/players/texture/Rook_Tower.png"));
-	texMgr->addTexture("pawn", new SOILTexture("../3DGE-TeamProject-Structure/assets/players/texture/Pawn.png"));
+	mManager.loadModel("rook", "assets/players/model/Rook.obj");
+	mManager.loadModel("pawn", "assets/players/model/Pawn.obj");
+	texMgr->addTexture("rook", new SOILTexture("assets/players/texture/Rook_Tower.png"));
+	texMgr->addTexture("pawn", new SOILTexture("assets/players/texture/Pawn.png"));
 
 	object = (OGLObject*)mManager.getModel("rook");
 

@@ -1,6 +1,7 @@
 #include "ModelManager.h"
 #include <vector>
 #include "Model.h"
+#include "WindowsConsoleLogger.h"
 
 
 ModelManager::ModelManager()
@@ -19,8 +20,13 @@ void ModelManager::loadModel(const string& ModelName, string filename)
 	}
 	Model* model;
 	model = new Model(ModelName);
+	if (model == 0)
+	{
+		this->logger->log(ModelName + " is null");
+	}
 	model->setLogger(this->logger);
 	model->loadModel(filename);
+	
 	this->ModelMap[ModelName] = model;	
 }
 
