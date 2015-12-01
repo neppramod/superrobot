@@ -36,7 +36,8 @@ CharacterCreation characterCreation;
 
 int main(void)
 {
-	//Game* gameWindow = new Game();
+	Game* gameWindow = new Game();
+	gameWindow->getWindow()->setVisible(false);
 	GameEngine gameEngine(
 		new WindowsConsoleLogger(), 
 		new TheGame(),
@@ -60,9 +61,7 @@ int main(void)
 	world.setEngine(&gameEngine);
 	GraphicsSystem *graphics = gameEngine.getGraphicsSystem();
 	world.setGraphicsSystem(graphics);
-	sf::RenderWindow* window = gameEngine.getGameWindow()->getWindow();
-	
-	world.setWindow(window);
+	gameWindow->getWindow()->setVisible(true);
 	
 	gameEngine.run();
 

@@ -17,7 +17,6 @@ public:
 	void update(const sf::Event& evnt, const sf::RenderWindow& window);
 	void draw(sf::RenderTarget & target, sf::RenderStates states) const;
 	void setEngine(GameEngine * engine);
-	void setWindow(sf::RenderWindow*);
 	void setGraphicsSystem(GraphicsSystem * system);
 	~World();
 private:
@@ -25,11 +24,8 @@ private:
 	Bot bot;
 	Label healthNum;
 	GameEngine* gameEngine;
-	sf::RenderWindow* window;
 	sf::Time timer;
 	sf::Clock clock;
 	GraphicsSystem *graphics;
-
-	mutable bool wonky;
 };
 #endif

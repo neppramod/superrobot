@@ -12,7 +12,6 @@ World::World() : player(), bot(), healthNum("health: ", false),clock(), Containe
 	push(&bot);
 	push(&healthNum);
 	
-	wonky = true;
 }
 
 void World::update() {
@@ -45,13 +44,13 @@ void World::update(const sf::Event& event, const sf::RenderWindow& window) {
 
 void World::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 	GraphicsSystem *graphics = this->gameEngine->getGraphicsSystem();
-	graphics->clearViewPort(0, 0, 1024, 720, { 0,0,0,1 });
 	
-	window->pushGLStates();
+	
+	target.pushGLStates();
 	glDisable(GL_BLEND);
 	glEnable(GL_DEPTH_TEST);
 	graphics->render();
-	window->popGLStates();
+	target.popGLStates();
 	
 	
 	for (const_iterator a = cbegin(); a != cend(); a++)
@@ -67,9 +66,6 @@ void World::setEngine(GameEngine* engine) {
 	this->gameEngine = engine;
 }
 
-void World::setWindow(sf::RenderWindow* window) {
-	this->window = window;
-}
 void World::setGraphicsSystem(GraphicsSystem* system) {
 	this->graphics = system;
 }
